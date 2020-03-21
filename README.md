@@ -1,4 +1,3 @@
-Second Commit
 
 > npm install
 
