@@ -8,7 +8,17 @@ router.get('/', function(req, res, next) {
   res.render('room', {
     title: 'Ultimate Bear Fight',
     room: req.baseUrl,
-    defaultNickname: generator.choose()
+    defaultNickname: generator.choose(),
+  });
+});
+
+/* POST room screen. */
+router.post('/', function(req, res, next) {
+  res.render('room', {
+    title: 'Ultimate Bear Fight',
+    room: req.baseUrl,
+    defaultNickname: generator.choose(),
+    nickname: req.query['nickname']
   });
 });
 

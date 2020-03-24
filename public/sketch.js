@@ -1,10 +1,10 @@
 const margin = 50;
 const padding = 20;
 const menuTopPadding = 30;
-const menuRightPadding = 20;
-const menuWidth = 200;
+const menuHorizontalPadding = 20;
+const menuWidth = 200; // TODO: Make this value responsive
 const borderRadius = 20;
-const rowHeight = 10;
+const rowHeight = 15;
 
 function setup() {
     var cnv = createCanvas(windowWidth - margin, windowHeight - margin);
@@ -21,7 +21,8 @@ function draw() {
 
     fill('black');
     for (let i in players) {
-        text(players[i].nickname, menuX + menuRightPadding, padding + menuTopPadding + i * rowHeight);
+        text(players[i].nickname, menuX + menuHorizontalPadding, padding + menuTopPadding + i * rowHeight);
+        text(players[i].points,width - padding - menuHorizontalPadding, padding + menuTopPadding + i * rowHeight);
     }
 }
 
